@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學習策略建議 - 人工智慧教科書</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>人工智慧教科書</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">學習儀表板</a></li>
+                <li><a href="strategy.html" class="active">學習策略建議</a></li>
+                <li><a href="index.html" class="logout">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>學習策略建議</h2>
+            <p>基於您的學習資料，系統為您提供個人化的學習建議</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card chart-card">
+                <h3>題型表現分析</h3>
+                <canvas id="performanceChart"></canvas>
+            </div>
+
+            <div class="card chart-card">
+                <h3>題型正確率比較</h3>
+                <canvas id="accuracyChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card strategy-details">
+            <h3>各題型詳細表現</h3>
+            <div class="performance-grid">
+                <div class="performance-item">
+                    <div class="performance-header">
+                        <span class="performance-icon static">📄</span>
+                        <h4>靜態題</h4>
+                    </div>
+                    <div class="performance-stats">
+                        <div class="stat-row">
+                            <span>答題數量：</span>
+                            <strong>45 題</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>正確率：</span>
+                            <strong>68%</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>平均作答時間：</span>
+                            <strong>2.3 分鐘</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-item">
+                    <div class="performance-header">
+                        <span class="performance-icon dynamic">🎬</span>
+                        <h4>動態題</h4>
+                    </div>
+                    <div class="performance-stats">
+                        <div class="stat-row">
+                            <span>答題數量：</span>
+                            <strong>52 題</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>正確率：</span>
+                            <strong>85%</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>平均作答時間：</span>
+                            <strong>3.1 分鐘</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-item">
+                    <div class="performance-header">
+                        <span class="performance-icon interactive">🎮</span>
+                        <h4>互動題</h4>
+                    </div>
+                    <div class="performance-stats">
+                        <div class="stat-row">
+                            <span>答題數量：</span>
+                            <strong>38 題</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>正確率：</span>
+                            <strong>82%</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>平均作答時間：</span>
+                            <strong>4.5 分鐘</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card ai-suggestion">
+            <div class="ai-header">
+                <span class="ai-icon">🤖</span>
+                <h3>AI 學習建議</h3>
+            </div>
+            <div class="suggestion-content">
+                <div class="suggestion-section">
+                    <h4>📊 分析結果</h4>
+                    <p>系統分析顯示您較適合透過<strong>動態與互動教材</strong>進行學習。您在這兩種題型的表現明顯優於靜態題，正確率分別達到 85% 和
+                        82%，顯示您對於有視覺回饋和操作互動的學習方式反應更佳。</p>
+                </div>
+
+                <div class="suggestion-section">
+                    <h4>💡 學習建議</h4>
+                    <ul class="suggestion-list">
+                        <li>
+                            <span class="badge badge-success">優先推薦</span>
+                            多使用動態教材和互動練習，這些題型能有效提升您的學習成效
+                        </li>
+                        <li>
+                            <span class="badge badge-warning">需要加強</span>
+                            靜態題正確率較低（68%），建議搭配動態說明後再練習靜態題
+                        </li>
+                        <li>
+                            <span class="badge badge-info">學習策略</span>
+                            先觀看動態教材理解概念，再透過互動練習加深印象，最後用靜態題檢驗學習成果
+                        </li>
+                        <li>
+                            <span class="badge badge-primary">時間管理</span>
+                            您在互動題的平均作答時間較長（4.5分鐘），建議分段學習，避免疲勞
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="suggestion-section">
+                    <h4>🎯 下一步行動</h4>
+                    <div class="action-cards">
+                        <div class="action-card">
+                            <div class="action-number">1</div>
+                            <div class="action-content">
+                                <h5>完成分數加減單元</h5>
+                                <p>使用動態教材學習</p>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-number">2</div>
+                            <div class="action-content">
+                                <h5>練習同分母分數加減</h5>
+                                <p>透過互動題強化概念</p>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-number">3</div>
+                            <div class="action-content">
+                                <h5>複習已完成單元</h5>
+                                <p>用靜態題檢驗學習成果</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card learning-tips">
+            <h3>💎 學習小技巧</h3>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <span class="tip-icon">⏰</span>
+                    <h4>定時休息</h4>
+                    <p>每學習 25 分鐘休息 5 分鐘，保持專注力</p>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">📝</span>
+                    <h4>做筆記</h4>
+                    <p>將重要概念記錄下來，加深記憶</p>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">🔄</span>
+                    <h4>定期複習</h4>
+                    <p>溫故知新，鞏固學習成果</p>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">🎓</span>
+                    <h4>循序漸進</h4>
+                    <p>按照單元順序學習，打好基礎</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾版權 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">國立臺北教育大學</div>
+            <p class="footer-text">National Taipei University of Education</p>
+            <p class="footer-copyright">© 2025 國立臺北教育大學 版權所有</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/strategy.js"></script>
+</body>
+
+</html>

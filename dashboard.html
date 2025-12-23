@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學習儀表板 - 人工智慧教科書</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>人工智慧教科書</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="active">學習儀表板</a></li>
+                <li><a href="strategy.html">學習策略建議</a></li>
+                <li><a href="index.html" class="logout">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>歡迎回來，<span id="studentName">王曉明</span>！</h2>
+            <p class="current-date" id="currentDate"></p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-content">
+                    <h3>點選次數</h3>
+                    <p class="stat-number" id="clickCount">124</p>
+                    <span class="stat-label">次</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-content">
+                    <h3>使用時間</h3>
+                    <p class="stat-number" id="studyTime">28.5</p>
+                    <span class="stat-label">小時</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <h3>完成度</h3>
+                    <p class="stat-number" id="completion">25</p>
+                    <span class="stat-label">%</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-content">
+                    <h3>完成單元</h3>
+                    <p class="stat-number" id="completedUnits">2</p>
+                    <span class="stat-label">/ 8</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card chart-card">
+                <h3>學習時間趨勢</h3>
+                <canvas id="timeChart"></canvas>
+            </div>
+
+            <div class="card chart-card">
+                <h3>單元狀態分布</h3>
+                <div class="progress-circle-container">
+                    <canvas id="progressChart"></canvas>
+                    <div class="progress-text">
+                        <span class="progress-percentage">50%</span>
+                        <span class="progress-label">平均進度</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card units-card">
+            <h3>學習單元列表</h3>
+            <div class="units-grid">
+                <a href="course.html?id=1&name=分數概念&progress=100" class="unit-item completed">
+                    <div class="unit-icon">✓</div>
+                    <div class="unit-content">
+                        <h4>分數概念</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                        <p>100% 完成</p>
+                    </div>
+                </a>
+
+                <a href="course.html?id=2&name=分數比較&progress=100" class="unit-item completed">
+                    <div class="unit-icon">✓</div>
+                    <div class="unit-content">
+                        <h4>分數比較</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                        <p>100% 完成</p>
+                    </div>
+                </a>
+
+                <a href="course.html?id=3&name=分數加減&progress=65" class="unit-item in-progress">
+                    <div class="unit-icon">⟳</div>
+                    <div class="unit-content">
+                        <h4>分數加減</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 65%"></div>
+                        </div>
+                        <p>65% 完成</p>
+                    </div>
+                </a>
+
+                <a href="course.html?id=4&name=同分母分數加減&progress=45" class="unit-item in-progress">
+                    <div class="unit-icon">⟳</div>
+                    <div class="unit-content">
+                        <h4>同分母分數加減</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 45%"></div>
+                        </div>
+                        <p>45% 完成</p>
+                    </div>
+                </a>
+
+                <a href="course.html?id=5&name=異分母分數加減&progress=0" class="unit-item">
+                    <div class="unit-icon">○</div>
+                    <div class="unit-content">
+                        <h4>異分母分數加減</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <p>尚未開始</p>
+                    </div>
+                </a>
+
+                <a href="course.html?id=6&name=分數乘法&progress=0" class="unit-item">
+                    <div class="unit-icon">○</div>
+                    <div class="unit-content">
+                        <h4>分數乘法</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <p>尚未開始</p>
+                    </div>
+                </a>
+
+                <a href="course.html?id=7&name=分數除法&progress=0" class="unit-item">
+                    <div class="unit-icon">○</div>
+                    <div class="unit-content">
+                        <h4>分數除法</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <p>尚未開始</p>
+                    </div>
+                </a>
+
+                <a href="course.html?id=8&name=分數應用題&progress=0" class="unit-item">
+                    <div class="unit-icon">○</div>
+                    <div class="unit-content">
+                        <h4>分數應用題</h4>
+                        <div class="unit-progress">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <p>尚未開始</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾版權 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">國立臺北教育大學</div>
+            <p class="footer-text">National Taipei University of Education</p>
+            <p class="footer-copyright">© 2025 國立臺北教育大學 版權所有</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

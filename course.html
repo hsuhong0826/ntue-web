@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課程內容 - 人工智慧教科書</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>人工智慧教科書</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">學習儀表板</a></li>
+                <li><a href="strategy.html">學習策略建議</a></li>
+                <li><a href="index.html" class="logout">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="course-header">
+            <a href="dashboard.html" class="back-btn">← 返回儀表板</a>
+            <h2 id="courseTitle">課程載入中...</h2>
+            <div class="course-meta">
+                <span class="course-progress" id="courseProgress">0% 完成</span>
+                <span class="course-status" id="courseStatus">尚未開始</span>
+            </div>
+        </div>
+
+        <!-- 課程統計資訊 -->
+        <div class="course-stats-grid">
+            <div class="course-stat-card">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-info">
+                    <h4>學習時間</h4>
+                    <p class="stat-value" id="courseStudyTime">0 小時</p>
+                </div>
+            </div>
+            <div class="course-stat-card">
+                <div class="stat-icon">✓</div>
+                <div class="stat-info">
+                    <h4>答題正確率</h4>
+                    <p class="stat-value" id="courseAccuracy">0%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI 個人化學習建議 -->
+        <div class="card course-ai-suggestion" id="courseSuggestion">
+            <div class="ai-header">
+                <span class="ai-icon">🤖</span>
+                <h3>個人化學習建議</h3>
+            </div>
+            <p class="suggestion-text" id="suggestionText">正在分析您的學習狀況...</p>
+        </div>
+
+        <!-- 學習教材 -->
+        <div class="card course-materials">
+            <h3>📚 學習教材</h3>
+            <div class="materials-list">
+                <div class="material-item">
+                    <span class="material-icon">📄</span>
+                    <div class="material-info">
+                        <h4>靜態教材</h4>
+                        <p>圖文說明與概念解釋</p>
+                    </div>
+                    <button class="btn-view">查看</button>
+                </div>
+                <div class="material-item">
+                    <span class="material-icon">🎬</span>
+                    <div class="material-info">
+                        <h4>動態教材</h4>
+                        <p>動畫演示與互動說明</p>
+                    </div>
+                    <button class="btn-view">查看</button>
+                </div>
+                <div class="material-item">
+                    <span class="material-icon">🎮</span>
+                    <div class="material-info">
+                        <h4>互動教材</h4>
+                        <p>遊戲式學習與實作練習</p>
+                    </div>
+                    <button class="btn-view">查看</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 練習題目 -->
+        <div class="card course-practice">
+            <h3>✏️ 練習題目</h3>
+            <div class="materials-list">
+                <div class="material-item">
+                    <span class="material-icon">📝</span>
+                    <div class="material-info">
+                        <h4>題目 1 - 靜態題</h4>
+                        <p>基礎概念測驗題</p>
+                    </div>
+                    <button class="btn-view">查看</button>
+                </div>
+                <div class="material-item">
+                    <span class="material-icon">🎯</span>
+                    <div class="material-info">
+                        <h4>題目 2 - 動態題</h4>
+                        <p>動態演示練習題</p>
+                    </div>
+                    <button class="btn-view">查看</button>
+                </div>
+                <div class="material-item">
+                    <span class="material-icon">🎮</span>
+                    <div class="material-info">
+                        <h4>題目 3 - 互動題</h4>
+                        <p>互動操作練習題</p>
+                    </div>
+                    <button class="btn-view">查看</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card course-notes">
+            <h3>📝 學習筆記</h3>
+            <textarea class="notes-input" placeholder="在此記錄您的學習心得與重點筆記..."></textarea>
+            <button class="btn btn-secondary">儲存筆記</button>
+        </div>
+    </div>
+
+    <!-- 頁尾版權 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">國立臺北教育大學</div>
+            <p class="footer-text">National Taipei University of Education</p>
+            <p class="footer-copyright">© 2025 國立臺北教育大學 版權所有</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/course.js"></script>
+</body>
+
+</html>
