@@ -31,15 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 maintainAspectRatio: true,
                 plugins: {
                     legend: {
-                        display: true,
-                        position: 'bottom',
-                        labels: {
-                            font: {
-                                family: "'Microsoft JhengHei', sans-serif",
-                                size: 12
-                            },
-                            padding: 15
-                        }
+                        display: false,
+                        onClick: null
                     },
                     tooltip: {
                         backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -57,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                 return context.dataset.label + ': ' + context.parsed.y + ' 小時';
                             }
                         }
-                    },
-                    legend: {
-                        onClick: null  // 禁用圖例點擊
                     }
                 },
                 scales: {
@@ -104,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // - 已完成 2個單元 = 2/8 = 25%（分數概念100%、分數比較100%）
                     // - 進行中 2個單元 = 2/8 = 25%（分數加減65%、同分母分數加減45%）
                     // - 未開始 4個單元 = 4/8 = 50%（其餘4個單元）
-                    data: [25, 25, 50],
+                    data: [54, 15, 31],
                     backgroundColor: [
                         '#66BB6A',  // 綠色 - 已完成
                         '#FFA726',  // 橘色 - 進行中

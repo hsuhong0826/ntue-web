@@ -399,6 +399,23 @@ body:not(.login-page) {
     animation-delay: 0.5s;
 }
 
+.topic-section {
+    margin-bottom: 32px;
+}
+
+.topic-section:last-child {
+    margin-bottom: 0;
+}
+
+.topic-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
 .units-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
