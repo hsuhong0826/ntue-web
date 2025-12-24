@@ -9,11 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const timeChart = new Chart(timeChartCanvas, {
             type: 'line',
             data: {
-                // 日期標籤（最近7天）
-                labels: ['12/2', '12/5', '12/8', '12/11', '12/14', '12/17', '12/20'],
+                labels: ['12/18', '12/19', '12/20', '12/21', '12/22', '12/23', '12/24'],
                 datasets: [{
                     label: '使用時間（小時）',
-                    // 每天的使用時間數據
                     data: [2.5, 3.2, 4.1, 3.8, 5.2, 4.7, 5.0],
                     borderColor: '#4A90E2',
                     backgroundColor: 'rgba(74, 144, 226, 0.1)',
@@ -31,8 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 maintainAspectRatio: true,
                 plugins: {
                     legend: {
-                        display: false,
-                        onClick: null
+                        display: false
                     },
                     tooltip: {
                         backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -83,45 +80,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 單元狀態分布圓餅圖
-    const progressChartCanvas = document.getElementById('progressChart');
-    if (progressChartCanvas) {
-        const progressChart = new Chart(progressChartCanvas, {
+    const unitProgressChartCanvas = document.getElementById('unitProgressChart');
+    if (unitProgressChartCanvas) {
+        const unitProgressChart = new Chart(unitProgressChartCanvas, {
             type: 'doughnut',
             data: {
                 labels: ['已完成', '進行中', '未開始'],
                 datasets: [{
-                    // 數據說明：
-                    // - 已完成 2個單元 = 2/8 = 25%（分數概念100%、分數比較100%）
-                    // - 進行中 2個單元 = 2/8 = 25%（分數加減65%、同分母分數加減45%）
-                    // - 未開始 4個單元 = 4/8 = 50%（其餘4個單元）
-                    data: [54, 15, 31],
+                    data: [7, 2, 4],
                     backgroundColor: [
-                        '#66BB6A',  // 綠色 - 已完成
-                        '#FFA726',  // 橘色 - 進行中
-                        '#E0E0E0'   // 灰色 - 未開始
+                        '#50C878',
+                        '#FF9F40',
+                        '#E1E8ED'
                     ],
-                    borderWidth: 0,
-                    hoverOffset: 10
+                    borderWidth: 0
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: true,
-                cutout: '70%',
+                maintainAspectRatio: false,
+                cutout: '75%',
                 plugins: {
                     legend: {
-                        display: true,
-                        position: 'bottom',
-                        labels: {
-                            font: {
-                                family: "'Microsoft JhengHei', sans-serif",
-                                size: 12
-                            },
-                            padding: 15,
-                            usePointStyle: true,
-                            pointStyle: 'circle'
-                        },
-                        onClick: null  // 禁用圖例點擊
+                        display: false
                     },
                     tooltip: {
                         backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -136,7 +117,138 @@ document.addEventListener('DOMContentLoaded', function () {
                         },
                         callbacks: {
                             label: function (context) {
-                                return context.label + ': ' + context.parsed + '%';
+                                return context.label + ': ' + context.parsed + ' 個單元';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // 題型正確率比較長條圖
+    const accuracyChartCanvas = document.getElementById('accuracyChart');
+    if (accuracyChartCanvas) {
+        const accuracyChart = new Chart(accuracyChartCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['靜態題', '動態題', '互動題'],
+                datasets: [{
+                    label: '正確率 (%)',
+                    data: [68, 85, 82],
+                    backgroundColor: [
+                        'rgba(74, 144, 226, 0.85)',
+                        'rgba(80, 200, 120, 0.85)',
+                        'rgba(255, 159, 64, 0.85)'
+                    ],
+                    borderColor: [
+                        '#4A90E2',
+                        '#50C878',
+                        '#FF9F40'
+                    ],
+                    borderWidth: 2,
+                    borderRadius: 6,
+                    barThickness: 50
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.85)',
+                        padding: 14,
+                        titleFont: {
+                            size: 14,
+                            family: "'Microsoft JhengHei', sans-serif",
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 13,
+                            family: "'Microsoft JhengHei', sans-serif"
+                        },
+                        callbacks: {
+                            label: function (context) {
+                                return '正確率: ' + context.parsed.y + '%';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            font: {
+                                family: "'Microsoft JhengHei', sans-serif",
+                                size: 12
+                            },
+                            callback: function (value) {
+                                return value + '%';
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            font: {
+                                size: 16,
+                                family: "'Microsoft JhengHei', sans-serif",
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // 情境完成狀態圓餅圖
+    const scenarioProgressChartCanvas = document.getElementById('scenarioProgressChart');
+    if (scenarioProgressChartCanvas) {
+        const scenarioProgressChart = new Chart(scenarioProgressChartCanvas, {
+            type: 'doughnut',
+            data: {
+                labels: ['已完成', '未開始'],
+                datasets: [{
+                    data: [5, 4],
+                    backgroundColor: [
+                        '#50C878',
+                        '#E1E8ED'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        titleFont: {
+                            size: 14,
+                            family: "'Microsoft JhengHei', sans-serif"
+                        },
+                        bodyFont: {
+                            size: 13,
+                            family: "'Microsoft JhengHei', sans-serif"
+                        },
+                        callbacks: {
+                            label: function (context) {
+                                return context.label + ': ' + context.parsed + ' 個情境';
                             }
                         }
                     }

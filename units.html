@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單元教科書 - 人工智慧教科書</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="units-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>人工智慧教科書</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">學習儀表板</a></li>
+                <li><a href="units.html" class="active">單元教科書</a></li>
+                <li><a href="scenarios.html">情境挑戰</a></li>
+                <li><a href="index.html" class="logout">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>單元教科書</h2>
+            <p>依年級分類的數學單元學習</p>
+        </div>
+
+        <!-- 學習單元列表 -->
+        <div class="card">
+            <h3>📚 學習單元列表</h3>
+
+            <!-- 一年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="1">
+                    <span class="grade-icon">📚</span>
+                    <h3>一年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-1">
+                    <div class="empty-state">
+                        <p>📝 一年級教材即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 二年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="2">
+                    <span class="grade-icon">📚</span>
+                    <h3>二年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-2">
+                    <div class="empty-state">
+                        <p>📝 二年級教材即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 三年級 -->
+            <div class="grade-section">
+                <div class="grade-header active" data-grade="3">
+                    <span class="grade-icon">📚</span>
+                    <h3>三年級</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="grade-content active" id="grade-3">
+                    <!-- 一、數與量 -->
+                    <div class="topic-section">
+                        <h4 class="topic-title">一、數與量</h4>
+                        <div class="units-grid">
+                            <a href="course.html?id=1&name=10000以內的數&progress=100" class="unit-item completed">
+                                <div class="unit-icon">✓</div>
+                                <div class="unit-content">
+                                    <h4>10000 以內的數</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                    <p>100% 完成</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=2&name=小數&progress=100" class="unit-item completed">
+                                <div class="unit-icon">✓</div>
+                                <div class="unit-content">
+                                    <h4>小數</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                    <p>100% 完成</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=3&name=時間&progress=100" class="unit-item completed">
+                                <div class="unit-icon">✓</div>
+                                <div class="unit-content">
+                                    <h4>時間</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                    <p>100% 完成</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=4&name=長度&progress=100" class="unit-item completed">
+                                <div class="unit-icon">✓</div>
+                                <div class="unit-content">
+                                    <h4>長度</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                    <p>100% 完成</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=5&name=容量&progress=100" class="unit-item completed">
+                                <div class="unit-icon">✓</div>
+                                <div class="unit-content">
+                                    <h4>容量</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                    <p>100% 完成</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=6&name=重量&progress=100" class="unit-item completed">
+                                <div class="unit-icon">✓</div>
+                                <div class="unit-content">
+                                    <h4>重量</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                    <p>100% 完成</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=7&name=分數&progress=100" class="unit-item completed">
+                                <div class="unit-icon">✓</div>
+                                <div class="unit-content">
+                                    <h4>分數</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 100%"></div>
+                                    </div>
+                                    <p>100% 完成</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 二、空間與形狀 -->
+                    <div class="topic-section">
+                        <h4 class="topic-title">二、空間與形狀</h4>
+                        <div class="units-grid">
+                            <a href="course.html?id=8&name=角的認識與分類&progress=55" class="unit-item in-progress">
+                                <div class="unit-icon">⟳</div>
+                                <div class="unit-content">
+                                    <h4>角的認識與分類</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 55%"></div>
+                                    </div>
+                                    <p>55% 完成</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=9&name=圓&progress=48" class="unit-item in-progress">
+                                <div class="unit-icon">⟳</div>
+                                <div class="unit-content">
+                                    <h4>圓</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 48%"></div>
+                                    </div>
+                                    <p>48% 完成</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 三、關係 -->
+                    <div class="topic-section">
+                        <h4 class="topic-title">三、關係</h4>
+                        <div class="units-grid">
+                            <a href="course.html?id=10&name=找規律&progress=0" class="unit-item">
+                                <div class="unit-icon">○</div>
+                                <div class="unit-content">
+                                    <h4>找規律</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <p>尚未開始</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=11&name=乘除關係與應用&progress=0" class="unit-item">
+                                <div class="unit-icon">○</div>
+                                <div class="unit-content">
+                                    <h4>乘除關係與應用</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <p>尚未開始</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 四、代數 -->
+                    <div class="topic-section">
+                        <h4 class="topic-title">四、代數</h4>
+                        <div class="units-grid">
+                            <a href="course.html?id=12&name=兩步驟問題解決&progress=0" class="unit-item">
+                                <div class="unit-icon">○</div>
+                                <div class="unit-content">
+                                    <h4>兩步驟問題解決</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <p>尚未開始</p>
+                                </div>
+                            </a>
+
+                            <a href="course.html?id=13&name=被乘數/乘數/被除數/除數未知&progress=0" class="unit-item">
+                                <div class="unit-icon">○</div>
+                                <div class="unit-content">
+                                    <h4>被乘數／乘數／被除數／除數未知</h4>
+                                    <div class="unit-progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <p>尚未開始</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 四年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="4">
+                    <span class="grade-icon">📚</span>
+                    <h3>四年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-4">
+                    <div class="empty-state">
+                        <p>📝 四年級教材即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 五年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="5">
+                    <span class="grade-icon">📚</span>
+                    <h3>五年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-5">
+                    <div class="empty-state">
+                        <p>📝 五年級教材即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 六年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="6">
+                    <span class="grade-icon">📚</span>
+                    <h3>六年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-6">
+                    <div class="empty-state">
+                        <p>📝 六年級教材即將上線</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最近學習記錄 -->
+        <div class="card recent-activities">
+            <h3>📖 最近學習記錄</h3>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>完成「分數」單元</h4>
+                        <p class="activity-time">今天 14:32</p>
+                    </div>
+                    <div class="activity-badge success">100%</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon in-progress">⟳</div>
+                    <div class="activity-content">
+                        <h4>學習「圓」單元</h4>
+                        <p class="activity-time">今天 11:15</p>
+                    </div>
+                    <div class="activity-badge">48%</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon in-progress">⟳</div>
+                    <div class="activity-content">
+                        <h4>學習「角的認識與分類」單元</h4>
+                        <p class="activity-time">昨天 16:20</p>
+                    </div>
+                    <div class="activity-badge">55%</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>完成「重量」單元</h4>
+                        <p class="activity-time">昨天 10:45</p>
+                    </div>
+                    <div class="activity-badge success">100%</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>完成「容量」單元</h4>
+                        <p class="activity-time">2 天前</p>
+                    </div>
+                    <div class="activity-badge success">100%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI 學習建議 -->
+        <div class="card ai-suggestion">
+            <div class="ai-header">
+                <span class="ai-icon">🤖</span>
+                <h3>AI 學習建議</h3>
+            </div>
+            <div class="suggestion-content">
+                <div class="suggestion-section">
+                    <h4>📊 分析結果</h4>
+                    <p>系統分析顯示您較適合透過<strong>動態與互動教材</strong>進行學習。您在這兩種題型的表現明顯優於靜態題，正確率分別達到 85% 和
+                        82%，顯示您對於有視覺回饋和操作互動的學習方式反應更佳。</p>
+                </div>
+
+                <div class="suggestion-section">
+                    <h4>💡 學習建議</h4>
+                    <ul class="suggestion-list">
+                        <li>
+                            <span class="badge badge-success">優先推薦</span>
+                            多使用動態教材和互動練習，這些題型能有效提升您的學習成效
+                        </li>
+                        <li>
+                            <span class="badge badge-warning">需要加強</span>
+                            靜態題正確率較低（68%），建議搭配動態說明後再練習靜態題
+                        </li>
+                        <li>
+                            <span class="badge badge-info">學習策略</span>
+                            先觀看動態教材理解概念，再透過互動練習加深印象，最後用靜態題檢驗學習成果
+                        </li>
+                        <li>
+                            <span class="badge badge-primary">時間管理</span>
+                            您在互動題的平均作答時間較長（4.5分鐘），建議分段學習，避免疲勞
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="suggestion-section">
+                    <h4>🎯 下一步行動</h4>
+                    <div class="action-cards">
+                        <div class="action-card">
+                            <div class="action-number">1</div>
+                            <div class="action-content">
+                                <h5>繼續學習「圓」單元</h5>
+                                <p>目前進度 48%，加油！</p>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-number">2</div>
+                            <div class="action-content">
+                                <h5>完成「角的認識與分類」</h5>
+                                <p>再努力一下就完成了</p>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-number">3</div>
+                            <div class="action-content">
+                                <h5>複習已完成單元</h5>
+                                <p>鞏固學習成果</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾版權 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">國立臺北教育大學</div>
+            <p class="footer-text">National Taipei University of Education</p>
+            <p class="footer-copyright">© 2025 國立臺北教育大學 版權所有</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/units.js"></script>
+</body>
+
+</html>

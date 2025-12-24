@@ -248,7 +248,7 @@ body:not(.login-page) {
 }
 
 .welcome-section h2 {
-    font-size: 32px;
+    font-size: 28px;
     color: var(--text-primary);
     margin-bottom: 8px;
 }
@@ -259,7 +259,7 @@ body:not(.login-page) {
 
 .welcome-section p {
     color: var(--text-secondary);
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .current-date {
@@ -272,19 +272,19 @@ body:not(.login-page) {
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin-bottom: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 28px;
 }
 
 .stat-card {
     background: var(--bg-secondary);
-    padding: 24px;
+    padding: 16px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out backwards;
 }
@@ -311,19 +311,19 @@ body:not(.login-page) {
 }
 
 .stat-icon {
-    font-size: 48px;
+    font-size: 32px;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .stat-content h3 {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .stat-number {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--primary-color);
     display: inline-block;
@@ -331,7 +331,7 @@ body:not(.login-page) {
 }
 
 .stat-label {
-    font-size: 16px;
+    font-size: 13px;
     color: var(--text-secondary);
 }
 
@@ -347,7 +347,7 @@ body:not(.login-page) {
 
 .card {
     background: var(--bg-secondary);
-    padding: 28px;
+    padding: 24px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     animation: fadeInUp 0.6s ease-out backwards;
@@ -357,12 +357,12 @@ body:not(.login-page) {
 .card h3 {
     font-size: 20px;
     color: var(--text-primary);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 
 .chart-card canvas {
-    max-height: 300px;
+    max-height: 220px;
 }
 
 .progress-circle-container {
@@ -380,7 +380,7 @@ body:not(.login-page) {
 
 .progress-percentage {
     display: block;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
     color: var(--primary-color);
 }
@@ -397,6 +397,59 @@ body:not(.login-page) {
    ============================================ */
 .units-card {
     animation-delay: 0.5s;
+}
+
+.units-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.units-header h3 {
+    margin: 0;
+}
+
+.material-type-switcher {
+    display: flex;
+    gap: 8px;
+    background: var(--bg-primary);
+    padding: 4px;
+    border-radius: var(--radius-sm);
+}
+
+.type-btn {
+    padding: 8px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.type-btn:hover {
+    color: var(--primary-color);
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.type-btn.active {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.material-content {
+    display: none;
+}
+
+.material-content.active {
+    display: block;
 }
 
 .topic-section {
@@ -420,6 +473,64 @@ body:not(.login-page) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
+}
+
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.scenario-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.scenario-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.scenario-icon {
+    font-size: 48px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.scenario-content h4 {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.scenario-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+.scenario-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.scenario-tags .tag {
+    padding: 4px 10px;
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .unit-item {
@@ -518,7 +629,7 @@ body:not(.login-page) {
 }
 
 .performance-item {
-    padding: 24px;
+    padding: 12px;
     border: 2px solid var(--border-color);
     border-radius: var(--radius-md);
     background: var(--bg-primary);
@@ -534,13 +645,13 @@ body:not(.login-page) {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .performance-icon {
-    font-size: 32px;
-    width: 56px;
-    height: 56px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -561,18 +672,18 @@ body:not(.login-page) {
 }
 
 .performance-header h4 {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-primary);
 }
 
 .performance-stats {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .stat-row {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 6px 0;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -582,20 +693,21 @@ body:not(.login-page) {
 
 .stat-row span {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .stat-row strong {
     color: var(--text-primary);
     font-weight: 600;
+    font-size: 15px;
 }
 
 /* ============================================
    AI 建議卡片
    ============================================ */
 .ai-suggestion {
-    background: linear-gradient(135deg, #E3F2FD 0%, #E8EAF6 100%);
-    border: 2px solid var(--info-color);
+    background: #EBF5FB !important;
+    border: 2px solid #4A90E2 !important;
     animation-delay: 0.4s;
 }
 
@@ -617,7 +729,7 @@ body:not(.login-page) {
 }
 
 .suggestion-section h4 {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-primary);
     margin-bottom: 12px;
     display: flex;
@@ -627,33 +739,39 @@ body:not(.login-page) {
 
 .suggestion-section p {
     color: var(--text-primary);
-    line-height: 1.8;
-    font-size: 15px;
+    line-height: 1.7;
+    font-size: 14px;
 }
 
 .suggestion-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .suggestion-list li {
-    padding: 16px;
+    padding: 14px;
     background: white;
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--primary-color);
+    border: 1px solid #e1e8ed;
     display: flex;
     gap: 12px;
     align-items: flex-start;
     line-height: 1.6;
 }
 
+.suggestion-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .badge {
     display: inline-block;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 13px;
     font-weight: 600;
     white-space: nowrap;
     flex-shrink: 0;
@@ -691,42 +809,69 @@ body:not(.login-page) {
     padding: 20px;
     border-radius: var(--radius-md);
     display: flex;
-    gap: 16px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid #e1e8ed;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4A90E2, #357abd);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .action-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
+    border-color: #4A90E2;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.2);
+}
+
+.action-card:hover::before {
+    opacity: 1;
 }
 
 .action-number {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4A90E2, #357abd);
     color: white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
     font-size: 18px;
-    flex-shrink: 0;
+    font-weight: bold;
+    align-self: flex-start;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.action-content {
+    text-align: left;
+    flex: 1;
 }
 
 .action-content h5 {
     font-size: 15px;
     color: var(--text-primary);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .action-content p {
     font-size: 13px;
     color: var(--text-secondary);
-    line-height: 1.4;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* ============================================
@@ -786,6 +931,37 @@ body:not(.login-page) {
    ============================================ */
 .course-header {
     margin-bottom: 32px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    color: #2c6eb8;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: var(--text-secondary);
+    margin: 0 4px;
+}
+
+.breadcrumb-current {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .back-btn {
@@ -1039,6 +1215,262 @@ body:not(.login-page) {
     margin-bottom: 12px;
 }
 
+/* ============================================
+   情境挑戰頁面
+   ============================================ */
+.scenario-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.scenario-title-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.scenario-title-group h2 {
+    margin: 0;
+}
+
+.scenario-meta-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.related-topics-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.topics-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.topics-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.topic-badge-inline {
+    padding: 4px 10px;
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.scenario-story {
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D6 100%);
+    border-left: 4px solid #FFB74D;
+}
+
+.story-content {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.scenario-challenge {
+    background: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 100%);
+    border-left: 4px solid #66BB6A;
+    position: relative;
+}
+
+.challenge-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: white;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+}
+
+.challenge-hint {
+    margin-top: 16px;
+    padding: 16px;
+    background: rgba(255, 193, 7, 0.1);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid #FFC107;
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hint-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #F57C00;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.hint-close-btn:hover {
+    background: rgba(245, 124, 0, 0.1);
+    transform: rotate(90deg);
+}
+
+.challenge-hint h4 {
+    margin: 0 0 8px 0;
+    color: #F57C00;
+    font-size: 15px;
+}
+
+.challenge-hint p {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.scenario-theme {
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.scenario-difficulty {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+}
+
+.related-topics {
+    background: var(--bg-secondary);
+}
+
+.topics-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.topic-badge {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.practice-area {
+    background: var(--bg-secondary);
+}
+
+.practice-content {
+    margin-top: 16px;
+}
+
+.answer-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    margin: 16px 0;
+    transition: all 0.3s ease;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.practice-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.answer-feedback {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    animation: fadeIn 0.3s ease;
+}
+
+.feedback-success {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border-left: 4px solid #66BB6A;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+}
+
+.feedback-success h4 {
+    color: #2E7D32;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.feedback-success p {
+    color: var(--text-primary);
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.feedback-error {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    border-left: 4px solid #FF9800;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+}
+
+.feedback-error h4 {
+    color: #E65100;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.feedback-error p {
+    color: var(--text-primary);
+    margin: 4px 0;
+    font-size: 14px;
+}
+
 .practice-number {
     font-weight: 700;
     color: var(--text-primary);
@@ -1165,6 +1597,22 @@ body:not(.login-page) {
         grid-template-columns: 1fr;
     }
 
+    /* 新增圖表區塊 RWD */
+    .charts-row {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .chart-col {
+        width: 100%;
+    }
+
+    .chart-col h4 {
+        text-align: center;
+        align-self: center;
+    }
+
     .units-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
@@ -1218,13 +1666,29 @@ body:not(.login-page) {
     }
 
     .stat-card {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        /* 保持橫向排列 */
+        text-align: left;
         gap: 12px;
+        padding: 12px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* 手機版圖表調整 */
+    .pie-chart-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    .pie-center-text .number {
+        font-size: 36px;
+    }
+
+    .bar-chart-wrapper {
+        height: 250px;
     }
 
     .units-grid {
@@ -1281,4 +1745,1067 @@ body:not(.login-page) {
 .footer-text::after {
     content: " · ";
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   年級收合樣式
+   ============================================ */
+.grade-section {
+    margin-bottom: 20px;
+}
+
+.grade-header {
+    background: #EBF5FB;
+    color: #2874A6;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    user-select: none;
+    border: 1px solid #D6EAF8;
+}
+
+.grade-header:hover {
+    background: #D6EAF8;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.grade-header.active {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.grade-icon {
+    font-size: 18px;
+}
+
+.grade-header h3 {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.toggle-icon {
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+.grade-header:not(.active) .toggle-icon {
+    content: '▶';
+}
+
+.grade-content {
+    display: none;
+    background: var(--bg-secondary);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    animation: slideDown 0.3s ease;
+}
+
+.grade-content.active {
+    display: block;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-state p {
+    font-size: 15px;
+    margin: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   最近學習記錄
+   ============================================ */
+.recent-activities {
+    margin-top: 24px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+    background: #f0f4f8;
+    transform: translateX(4px);
+}
+
+.activity-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.activity-icon.completed {
+    background: linear-gradient(135deg, #50C878 0%, #3da661 100%);
+    color: white;
+}
+
+.activity-icon.in-progress {
+    background: linear-gradient(135deg, #FFA726 0%, #f57c00 100%);
+    color: white;
+}
+
+.activity-icon.scenario {
+    background: linear-gradient(135deg, #4A90E2 0%, #357abd 100%);
+    color: white;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content h4 {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.activity-time {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.activity-badge {
+    padding: 6px 14px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.activity-badge.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* ============================================
+   情境完成狀態標籤
+   ============================================ */
+.scenario-item {
+    position: relative;
+}
+
+.scenario-status {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #50C878 0%, #3da661 100%);
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(80, 200, 120, 0.3);
+}
+
+.scenario-status.in-progress {
+    background: linear-gradient(135deg, #FFA726 0%, #f57c00 100%);
+    box-shadow: 0 2px 8px rgba(255, 167, 38, 0.3);
+}
+
+.scenario-status.not-started {
+    background: linear-gradient(135deg, #90A4AE 0%, #607d8b 100%);
+    box-shadow: 0 2px 8px rgba(144, 164, 174, 0.3);
+}
+
+.scenario-item.completed {
+    border: 2px solid #50C878;
+}
+
+.scenario-item.in-progress {
+    border: 2px solid #FFA726;
+}
+
+/* ============================================
+   改進年級收合樣式
+   ============================================ */
+.grade-header {
+    background: #EBF5FB;
+    color: #2874A6;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    user-select: none;
+    border: 1px solid #D6EAF8;
+}
+
+.grade-header:hover {
+    background: #D6EAF8;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.grade-header.active {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    background: #D6EAF8;
+    color: #154360;
+}
+
+.grade-icon {
+    font-size: 18px;
+}
+
+.grade-header h3 {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.toggle-icon {
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.grade-content {
+    display: none;
+    background: var(--bg-secondary);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    animation: slideDown 0.3s ease;
+    border: 1px solid #D6EAF8;
+    border-top: none;
+}
+
+/* RWD 響應式調整 */
+@media (max-width: 768px) {
+    .activity-item {
+        padding: 12px;
+    }
+
+    .activity-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .activity-content h4 {
+        font-size: 14px;
+    }
+
+    .scenario-status {
+        top: 8px;
+        right: 8px;
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+}
+
+/* ============================================
+   課程卡片區塊美化（單元教科書和情境挑戰）
+   ============================================ */
+.topic-section {
+    margin-bottom: 36px;
+}
+
+.topic-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 單元網格 - 3列佈局 */
+.units-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* 情境網格 - 3列佈局 */
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* 單元卡片樣式 */
+.unit-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.unit-item:not(.completed):not(.in-progress) .unit-icon {
+    background: #f5f5f5;
+    color: #9e9e9e;
+    box-shadow: none;
+}
+
+.unit-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.unit-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(74, 144, 226, 0.25);
+    border-color: var(--primary-color);
+}
+
+.unit-item:hover::before {
+    opacity: 1;
+}
+
+.unit-item.completed {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
+    border-color: var(--secondary-color);
+}
+
+.unit-item.completed::before {
+    background: linear-gradient(90deg, #50C878, #3da661);
+}
+
+.unit-item.in-progress {
+    background: linear-gradient(135deg, #fff3e0 0%, #fef8f3 100%);
+    border-color: var(--warning-color);
+}
+
+.unit-item.in-progress::before {
+    background: linear-gradient(90deg, #FFA726, #f57c00);
+}
+
+.unit-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary-color), #357abd);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    flex-shrink: 0;
+}
+
+.unit-item.completed .unit-icon {
+    background: linear-gradient(135deg, #50C878, #3da661);
+    box-shadow: 0 4px 12px rgba(80, 200, 120, 0.3);
+}
+
+.unit-item.in-progress .unit-icon {
+    background: linear-gradient(135deg, #FFA726, #f57c00);
+    box-shadow: 0 4px 12px rgba(255, 167, 38, 0.3);
+}
+
+.unit-content {
+    flex: 1;
+}
+
+.unit-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.unit-progress {
+    width: 100%;
+    height: 6px;
+    background: #e1e8ed;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #357abd);
+    border-radius: 10px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.unit-item.completed .progress-bar {
+    background: linear-gradient(90deg, #50C878, #3da661);
+}
+
+.unit-item.in-progress .progress-bar {
+    background: linear-gradient(90deg, #FFA726, #f57c00);
+}
+
+.unit-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* 情境卡片樣式 */
+.scenario-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.scenario-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4A90E2, #357abd);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scenario-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 36px rgba(74, 144, 226, 0.3);
+    border-color: var(--primary-color);
+}
+
+.scenario-item:hover::before {
+    opacity: 1;
+}
+
+.scenario-item.completed {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
+    border-color: var(--secondary-color);
+}
+
+.scenario-item.completed::before {
+    background: linear-gradient(90deg, #50C878, #3da661);
+}
+
+.scenario-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #4A90E2 0%, #357abd 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 6px 16px rgba(74, 144, 226, 0.35);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.scenario-item:hover .scenario-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.scenario-item.completed .scenario-icon {
+    background: linear-gradient(135deg, #50C878 0%, #3da661 100%);
+    box-shadow: 0 6px 16px rgba(80, 200, 120, 0.35);
+}
+
+.scenario-content {
+    flex: 1;
+}
+
+.scenario-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.scenario-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.scenario-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.scenario-tags .tag {
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 100%);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+    transition: all 0.2s ease;
+}
+
+.scenario-item:hover .scenario-tags .tag {
+    background: linear-gradient(135deg, #4A90E2 0%, #357abd 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.scenario-item.completed .scenario-tags .tag {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
+    color: var(--secondary-color);
+    border-color: rgba(80, 200, 120, 0.2);
+}
+
+.scenario-item.completed:hover .scenario-tags .tag {
+    background: linear-gradient(135deg, #50C878 0%, #3da661 100%);
+    color: white;
+}
+
+/* 空白狀態樣式 */
+.empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--text-secondary);
+    font-size: 15px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* RWD 響應式調整 */
+@media (max-width: 1024px) {
+    .units-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+    }
+
+    .scenario-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .units-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scenario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .unit-item {
+        padding: 20px;
+    }
+
+    .scenario-item {
+        padding: 24px;
+    }
+
+    .topic-title {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   圓餅圖圖例樣式
+   ============================================ */
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ============================================
+   覆蓋課程列表樣式 - 使用原來的簡單樣式
+   ============================================ */
+
+/* 單元列表項目 - 簡單樣式 */
+.card .unit-item {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.card .unit-item::before {
+    display: none;
+}
+
+.card .unit-item:hover {
+    border-color: var(--primary-color);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-sm);
+    background: white;
+}
+
+.card .unit-item.completed {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+    border-color: var(--success-color);
+}
+
+.card .unit-item.in-progress {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-color: var(--warning-color);
+}
+
+.card .unit-icon {
+    font-size: 24px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: none;
+}
+
+.card .unit-item.completed .unit-icon {
+    color: var(--success-color);
+    background: white;
+    box-shadow: none;
+}
+
+.card .unit-item.in-progress .unit-icon {
+    color: var(--warning-color);
+    background: white;
+    box-shadow: none;
+}
+
+.card .unit-content {
+    flex: 1;
+}
+
+.card .unit-content h4 {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.card .unit-progress {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.card .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+.card .unit-item.completed .progress-bar {
+    background: linear-gradient(90deg, var(--success-color) 0%, #66BB6A 100%);
+}
+
+.card .unit-item.in-progress .progress-bar {
+    background: linear-gradient(90deg, var(--warning-color) 0%, #FFB74D 100%);
+}
+
+.card .unit-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: normal;
+}
+
+/* 情境列表項目 - 簡單樣式 */
+.card .scenario-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+.card .scenario-item::before {
+    display: none;
+}
+
+.card .scenario-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px) scale(1);
+}
+
+.card .scenario-item.completed {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+    border-color: var(--success-color);
+}
+
+.card .scenario-icon {
+    font-size: 40px;
+    line-height: 1;
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.card .scenario-item:hover .scenario-icon {
+    transform: none;
+}
+
+.card .scenario-item.completed .scenario-icon {
+    background: none;
+    box-shadow: none;
+}
+
+.card .scenario-content {
+    flex: 1;
+}
+
+.card .scenario-content h4 {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.card .scenario-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+.card .scenario-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card .scenario-tags .tag {
+    padding: 4px 10px;
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    transform: none;
+}
+
+.card .scenario-item:hover .scenario-tags .tag {
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+    transform: none;
+}
+
+.card .scenario-item.completed .scenario-tags .tag {
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+}
+
+.card .scenario-item.completed:hover .scenario-tags .tag {
+    background: linear-gradient(135deg, #4da1ff 0%, #3b82f6 100%);
+}
+
+/* ============================================
+   區塊樣式調整
+   ============================================ */
+.chart-section {
+    margin-top: 24px;
+}
+
+.chart-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.performance-details {
+    margin-top: 28px;
+}
+
+.performance-details h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.card>h3 {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ============================================
+   儀表板區塊美化
+   ============================================ */
+/* 儀表板頁面 - 三個區塊不同顏色 */
+/* 學習總覽區塊 - 藍色主題 */
+.dashboard-page .card:nth-child(2) {
+    border-left: 5px solid #4A90E2;
+    background: linear-gradient(to right, #f0f7ff 0%, var(--bg-secondary) 15%);
+}
+
+.dashboard-page .card:nth-child(2) h3 {
+    color: #2c5aa0;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 單元學習區塊 - 綠色主題 */
+.dashboard-page .card:nth-child(3) {
+    border-left: 5px solid #50C878;
+    background: linear-gradient(to right, #f0faf4 0%, var(--bg-secondary) 15%);
+}
+
+.dashboard-page .card:nth-child(3) h3 {
+    color: #2d7a4a;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 情境挑戰區塊 - 紫色主題 */
+.dashboard-page .card:nth-child(4) {
+    border-left: 5px solid #9b59b6;
+    background: linear-gradient(to right, #f9f4fc 0%, var(--bg-secondary) 15%);
+}
+
+.dashboard-page .card:nth-child(4) h3 {
+    color: #7d3c98;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 單元教科書頁面 - 綠色主題 */
+.units-page .card {
+    background: var(--bg-secondary);
+}
+
+.units-page .card h3:first-child {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* 情境挑戰頁面 - 紫色主題 */
+.scenarios-page .card {
+    background: var(--bg-secondary);
+}
+
+.scenarios-page .card h3:first-child {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ============================================
+   重構後的圖表區塊樣式
+   ============================================ */
+.charts-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.chart-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-col h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+/* 圓餅圖樣式 */
+.pie-chart-wrapper {
+    position: relative;
+    height: 260px;
+    width: 260px;
+    margin-bottom: 16px;
+}
+
+.pie-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.pie-center-text .number {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: #50C878;
+}
+
+.pie-center-text .label {
+    display: block;
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.chart-legend-custom {
+    display: flex;
+    gap: 24px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.legend-item .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.legend-item .dot.completed {
+    background-color: #50C878;
+}
+
+.legend-item .dot.not-started {
+    background-color: #E1E8ED;
+}
+
+/* 長條圖樣式 */
+.bar-chart-wrapper {
+    width: 100%;
+    height: 300px;
+    /* 設定固定高度 */
+}
+
+/* 移除舊的圖表樣式干擾 */
+#timeChart {
+    max-height: 250px !important;
 }

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情境挑戰 - 人工智慧教科書</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="scenarios-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>人工智慧教科書</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">學習儀表板</a></li>
+                <li><a href="units.html">單元教科書</a></li>
+                <li><a href="scenarios.html" class="active">情境挑戰</a></li>
+                <li><a href="index.html" class="logout">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>情境挑戰</h2>
+            <p>生活中的數學 - 用真實情境學習數學概念</p>
+        </div>
+
+        <!-- 情境挑戰列表 -->
+        <div class="card">
+            <h3>🎯 情境挑戰列表</h3>
+
+            <!-- 一年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="1">
+                    <span class="grade-icon">🎯</span>
+                    <h3>一年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-1">
+                    <div class="empty-state">
+                        <p>🎮 一年級情境挑戰即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 二年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="2">
+                    <span class="grade-icon">🎯</span>
+                    <h3>二年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-2">
+                    <div class="empty-state">
+                        <p>🎮 二年級情境挑戰即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 三年級 -->
+            <div class="grade-section">
+                <div class="grade-header active" data-grade="3">
+                    <span class="grade-icon">🎯</span>
+                    <h3>三年級</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="grade-content active" id="grade-3">
+                    <!-- 學校的一天 -->
+                    <div class="topic-section">
+                        <h4 class="topic-title">📚 學校的一天</h4>
+                        <div class="scenario-grid">
+                            <a href="scenario.html?id=1&name=早自習時間&theme=school" class="scenario-item completed">
+                                <div class="scenario-status">✓ 已完成</div>
+                                <div class="scenario-icon">🌅</div>
+                                <div class="scenario-content">
+                                    <h4>早自習時間</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">時間</span>
+                                        <span class="tag">計算</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="scenario.html?id=2&name=午餐分配&theme=school" class="scenario-item completed">
+                                <div class="scenario-status">✓ 已完成</div>
+                                <div class="scenario-icon">🍱</div>
+                                <div class="scenario-content">
+                                    <h4>午餐分配</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">分數</span>
+                                        <span class="tag">乘法</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="scenario.html?id=3&name=體育課跑步&theme=school" class="scenario-item">
+                                <div class="scenario-status not-started">尚未開始</div>
+                                <div class="scenario-icon">🏃</div>
+                                <div class="scenario-content">
+                                    <h4>體育課跑步</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">長度</span>
+                                        <span class="tag">單位換算</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 家裡的生活 -->
+                    <div class="topic-section">
+                        <h4 class="topic-title">🏠 家裡的生活</h4>
+                        <div class="scenario-grid">
+                            <a href="scenario.html?id=4&name=做家事時間&theme=home" class="scenario-item completed">
+                                <div class="scenario-status">✓ 已完成</div>
+                                <div class="scenario-icon">🧹</div>
+                                <div class="scenario-content">
+                                    <h4>做家事時間</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">時間</span>
+                                        <span class="tag">加法</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="scenario.html?id=5&name=烘焙蛋糕&theme=home" class="scenario-item completed">
+                                <div class="scenario-status">✓ 已完成</div>
+                                <div class="scenario-icon">🎂</div>
+                                <div class="scenario-content">
+                                    <h4>烘焙蛋糕</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">重量</span>
+                                        <span class="tag">減法</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="scenario.html?id=6&name=分享零食&theme=home" class="scenario-item">
+                                <div class="scenario-status not-started">尚未開始</div>
+                                <div class="scenario-icon">🍪</div>
+                                <div class="scenario-content">
+                                    <h4>分享零食</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">除法</span>
+                                        <span class="tag">平分</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 放假的日子 -->
+                    <div class="topic-section">
+                        <h4 class="topic-title">🎈 放假的日子</h4>
+                        <div class="scenario-grid">
+                            <a href="scenario.html?id=7&name=遊樂園門票&theme=holiday" class="scenario-item completed">
+                                <div class="scenario-status">✓ 已完成</div>
+                                <div class="scenario-icon">🎢</div>
+                                <div class="scenario-content">
+                                    <h4>遊樂園門票</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">小數</span>
+                                        <span class="tag">乘法</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="scenario.html?id=8&name=野餐準備飲料&theme=holiday" class="scenario-item">
+                                <div class="scenario-status not-started">尚未開始</div>
+                                <div class="scenario-icon">🧃</div>
+                                <div class="scenario-content">
+                                    <h4>野餐準備飲料</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">容量</span>
+                                        <span class="tag">單位換算</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="scenario.html?id=9&name=電影時刻表&theme=holiday" class="scenario-item">
+                                <div class="scenario-status not-started">尚未開始</div>
+                                <div class="scenario-icon">🎬</div>
+                                <div class="scenario-content">
+                                    <h4>電影時刻表</h4>
+                                    <div class="scenario-tags">
+                                        <span class="tag">時間</span>
+                                        <span class="tag">加法</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 四年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="4">
+                    <span class="grade-icon">🎯</span>
+                    <h3>四年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-4">
+                    <div class="empty-state">
+                        <p>🎮 四年級情境挑戰即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 五年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="5">
+                    <span class="grade-icon">🎯</span>
+                    <h3>五年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-5">
+                    <div class="empty-state">
+                        <p>🎮 五年級情境挑戰即將上線</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 六年級 -->
+            <div class="grade-section">
+                <div class="grade-header" data-grade="6">
+                    <span class="grade-icon">🎯</span>
+                    <h3>六年級</h3>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="grade-content" id="grade-6">
+                    <div class="empty-state">
+                        <p>🎮 六年級情境挑戰即將上線</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最近挑戰記錄 -->
+        <div class="card">
+            <h3>🎮 最近挑戰記錄</h3>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>挑戰「遊樂園門票」情境</h4>
+                        <p class="activity-time">今天 15:20</p>
+                    </div>
+                    <span class="badge badge-success">完成</span>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>挑戰「烘焙蛋糕」情境</h4>
+                        <p class="activity-time">今天 13:45</p>
+                    </div>
+                    <span class="badge badge-success">完成</span>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>挑戰「做家事時間」情境</h4>
+                        <p class="activity-time">昨天 16:10</p>
+                    </div>
+                    <span class="badge badge-success">完成</span>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>挑戰「午餐分配」情境</h4>
+                        <p class="activity-time">昨天 14:30</p>
+                    </div>
+                    <span class="badge badge-success">完成</span>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon completed">✓</div>
+                    <div class="activity-content">
+                        <h4>挑戰「早自習時間」情境</h4>
+                        <p class="activity-time">2 天前</p>
+                    </div>
+                    <span class="badge badge-success">完成</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI 學習建議 -->
+        <div class="card ai-suggestion">
+            <div class="ai-header">
+                <span class="ai-icon">🤖</span>
+                <h3>AI 學習建議</h3>
+            </div>
+            <div class="suggestion-content">
+                <div class="suggestion-section">
+                    <h4>📊 分析結果</h4>
+                    <p>根據你的挑戰記錄，你在「時間」和「小數」相關情境表現優異，但在「分數計算」情境中需要更多練習。建議先完成基礎分數單元後再挑戰相關情境。</p>
+                </div>
+
+                <div class="suggestion-section">
+                    <h4>💡 學習建議</h4>
+                    <ul class="suggestion-list">
+                        <li>
+                            <span class="badge badge-success">建議挑戰</span>
+                            體育課跑步情境 - 結合時間與單位換算，適合您目前的學習程度
+                        </li>
+                        <li>
+                            <span class="badge badge-warning">需要加強</span>
+                            分數應用情境正確率較低，建議先複習「分數的運算」單元
+                        </li>
+                        <li>
+                            <span class="badge badge-info">學習策略</span>
+                            先完成基礎單元學習，再挑戰相關情境，能有效提升解題能力
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="suggestion-section">
+                    <h4>🚀 下一步行動</h4>
+                    <div class="action-cards">
+                        <div class="action-card">
+                            <div class="action-number">1</div>
+                            <div class="action-content">
+                                <h5>挑戰新情境：體育課跑步</h5>
+                                <p>應用單位換算知識</p>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-number">2</div>
+                            <div class="action-content">
+                                <h5>複習「分數的運算」單元</h5>
+                                <p>鞏固基礎後再挑戰情境</p>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-number">3</div>
+                            <div class="action-content">
+                                <h5>完成已開始的情境</h5>
+                                <p>保持學習連貫性</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾版權 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">國立臺北教育大學</div>
+            <p class="footer-text">National Taipei University of Education</p>
+            <p class="footer-copyright">© 2025 國立臺北教育大學 版權所有</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/scenarios.js"></script>
+</body>
+
+</html>

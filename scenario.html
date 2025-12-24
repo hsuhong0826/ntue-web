@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情境挑戰 - 人工智慧教科書</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>人工智慧教科書</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">學習儀表板</a></li>
+                <li><a href="units.html">單元教科書</a></li>
+                <li><a href="scenarios.html">情境挑戰</a></li>
+                <li><a href="index.html" class="logout">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="course-header">
+            <div class="breadcrumb">
+                <a href="scenarios.html">情境挑戰</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="scenarios.html" id="themeLink">主題</a>
+                <span class="breadcrumb-separator">›</span>
+                <span id="scenarioTitle" class="breadcrumb-current">情境名稱</span>
+            </div>
+            <div class="scenario-title-row">
+                <div class="scenario-title-group">
+                    <h2 id="scenarioName">情境挑戰</h2>
+                    <span class="scenario-theme" id="scenarioTheme">主題</span>
+                </div>
+                <div class="scenario-meta-group">
+                    <span class="scenario-difficulty" id="scenarioDifficulty">難度：適中</span>
+                    <!-- 相關知識點 -->
+                    <div class="related-topics-inline" id="relatedTopicsInline">
+                        <span class="topics-label">📚 相關知識：</span>
+                        <div class="topics-badges" id="relatedTopics"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 情境描述 -->
+        <div class="card scenario-story">
+            <h3>📖 情境故事</h3>
+            <div class="story-content" id="storyContent">
+                <p>載入中...</p>
+            </div>
+        </div>
+
+        <!-- 問題挑戰 -->
+        <div class="card scenario-challenge">
+            <h3>💡 問題挑戰</h3>
+            <div class="challenge-content" id="challengeContent">
+                <p>載入中...</p>
+            </div>
+            <div class="challenge-hint" id="challengeHint" style="display: none;">
+                <button class="hint-close-btn" onclick="hideHint()">✕</button>
+                <h4>💭 提示</h4>
+                <p id="hintText"></p>
+            </div>
+            <button class="btn btn-primary" id="showHintBtn" onclick="toggleHint()">顯示提示</button>
+        </div>
+
+        <!-- 互動練習區 -->
+        <div class="card practice-area">
+            <h3>✏️ 互動練習</h3>
+            <div class="practice-content">
+                <div class="practice-question" id="practiceQuestion">
+                    <p>請在下方輸入你的答案：</p>
+                    <input type="text" class="answer-input" id="answerInput" placeholder="請輸入答案">
+                    <div class="practice-buttons">
+                        <button class="btn btn-primary" onclick="checkAnswer()">檢查答案</button>
+                        <button class="btn btn-secondary" onclick="resetAnswer()">重新作答</button>
+                    </div>
+                    <div class="answer-feedback" id="answerFeedback"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI 學習建議 -->
+        <div class="card course-ai-suggestion">
+            <div class="ai-header">
+                <span class="ai-icon">🤖</span>
+                <h3>AI 學習建議</h3>
+            </div>
+            <p class="suggestion-text" id="aiSuggestion">根據你的答題狀況，系統會提供個人化的學習建議...</p>
+        </div>
+    </div>
+
+    <!-- 頁尾版權 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">國立臺北教育大學</div>
+            <p class="footer-text">National Taipei University of Education</p>
+            <p class="footer-copyright">© 2025 國立臺北教育大學 版權所有</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/scenario.js"></script>
+</body>
+
+</html>
